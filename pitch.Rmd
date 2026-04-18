@@ -1,0 +1,49 @@
+---
+title: "Colorado Trout Weight Estimator"
+author: "Josh Bailey"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: ioslides_presentation
+---
+
+## The Problem
+
+You pull a trout out of Montgomery Reservoir. It's a nice fish. But how much does it weigh, and is it a keeper?
+
+Most anglers guess. This app does the math.
+
+## The App
+
+**Colorado Trout Weight Estimator** estimates fish weight from length using standard fisheries length-weight formulas — and tells you whether the fish meets Colorado's 12-inch minimum.
+
+- Input: fish length (slider) + species (radio button)
+- Output: estimated weight, keeper verdict, length-weight curve
+
+## How It Works
+
+Weight is estimated using the formula:
+
+$$W = a \times L^b$$
+
+Coefficients by species (imperial, lbs/inches):
+
+| Species | a | b |
+|---|---|---|
+| Rainbow Trout | 0.000830 | 3.15 |
+| Brown Trout | 0.000710 | 3.19 |
+| Brook Trout | 0.000590 | 3.22 |
+
+Your fish is plotted on the curve so you can see how it compares.
+
+## Try It
+
+The app is live on shinyapps.io:
+
+**[Colorado Trout Weight Estimator](https://joshuabailey5280.shinyapps.io/trout_estimator)**
+
+Code is on GitHub. Simple to use — no setup required.
+
+## Why It Matters
+
+High-altitude Colorado trout grow slower than lowland fish. A 14-inch rainbow at 10,000 feet is a different fish than one from a valley river.
+
+Knowing the weight from length helps anglers make better decisions — keep, release, or photograph and let it go.
